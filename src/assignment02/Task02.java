@@ -32,5 +32,11 @@ public class Task02 {
         x[1] = 10;
         print(b); // 1 10 3 4 5 6 7 8 9
         print(x); // 1 10 3 4 5 6 7 8 9
+
+        int e = add(x[1], y[1]);
+        System.out.println(e); // 4
+
+        int e = add(x[x.length-1], z[1]);
+        System.out.println(e); // 10
     }
 }
