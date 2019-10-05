@@ -8,12 +8,19 @@ public class Task01 {
 
         int x = 10;
         int y = 4;
+        double z = 1.5;
 
         System.out.println(doubleIt(x)); //20
         System.out.println(doubleIt(y)); //8
 
         int a = add(x,y);
         System.out.println(a); //14
+
+        double e = add(x,z);
+        System.out.println(a); //11.5
+
+        double f = add(x,z,y);
+        System.out.println(a); //15.5
 
         int b = multiply(x,y);
         System.out.println(b); //40
