@@ -30,9 +30,9 @@ public class Task02 {
         print(c); // 1 2 3 4 5 6 7 8 9 1 1 1 1 1 1 1
 
         int d[] = w2.copyRef(x);
-        print(b); // 1 2 3 4 5 6 7 8 9
+        print(d); // 1 2 3 4 5 6 7 8 9
         x[1] = 10;
-        print(b); // 1 10 3 4 5 6 7 8 9
+        print(d); // 1 10 3 4 5 6 7 8 9
         print(x); // 1 10 3 4 5 6 7 8 9
 
         int e = w2.add(x[1], y[1]);

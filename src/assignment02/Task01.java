@@ -19,10 +19,10 @@ public class Task01 {
         System.out.println(a); //14
 
         double e = add(x,z);
-        System.out.println(a); //11.5
+        System.out.println(e); //11.5
 
         double f = add(x,z,y);
-        System.out.println(a); //15.5
+        System.out.println(f); //15.5
 
         int b = multiply(x,y);
         System.out.println(b); //40
