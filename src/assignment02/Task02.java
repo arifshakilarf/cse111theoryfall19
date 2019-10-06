@@ -24,19 +24,19 @@ public class Task02 {
         print(x); // 1 10 3 4 5 6 7 8 9
 
         int b[] = w2.join(x,y);
-        print(b); // 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+        print(b); // 1 10 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
 
         int c[] = w2.join(x,z);
-        print(c); // 1 2 3 4 5 6 7 8 9 1 1 1 1 1 1 1
+        print(c); // 1 10 3 4 5 6 7 8 9 1 1 1 1 1 1 1
 
         int d[] = w2.copyRef(x);
-        print(d); // 1 2 3 4 5 6 7 8 9
-        x[1] = 10;
         print(d); // 1 10 3 4 5 6 7 8 9
-        print(x); // 1 10 3 4 5 6 7 8 9
+        x[2] = 112;
+        print(d); // 1 10 112 4 5 6 7 8 9
+        print(x); // 1 10 112 4 5 6 7 8 9
 
         int e = w2.add(x[1], y[1]);
-        System.out.println(e); // 4
+        System.out.println(e); // 12
 
         int f = w2.add(x[x.length-1], z[1]);
         System.out.println(f); // 10

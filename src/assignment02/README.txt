@@ -3,6 +3,7 @@ Assignment 02
 Deadline: 12th October
 
 Instructions:
+    0.  Your task is to be able to run Task01, Task02, Task03 successfully.
     1.  You CANNOT change any part of the main method of each class.
     2.  You may code in the given class file if required
     3.  You may need to create new classes to write methods
