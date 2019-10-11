@@ -38,41 +38,7 @@ public class Task01 {
         System.out.println(makeMeme()); //*genius meme face. When you finally complete one task of this assignment.
 
     }
-    public static int add(int x, int y){
-      int p;
-      p=x+y;
-      return p;
-    }
-    public static double add(int x, double y){
-      double p;
-      p=x+y;
-      return p;
-    }
-    public static double add(int x, double y, int z){
-      double p;
-      p=x+y+z;
-      return p;
-    }
-    public static int multiply(int x, int y){
-      int p;
-      p=x*y;
-      return p;
-    }
-    public static int subtract(int x, int y){
-      int p;
-      if(x>y){
-        p=x-y;
-      }
-      else{
-        p=y-x;
-      }
-      return p;
-    }
-    public static String makeMeme(){
-      String m = ":')";
-      return m;
-    }
-    
+    //You may need to code here
 
 
 }
