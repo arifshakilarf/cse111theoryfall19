@@ -27,9 +27,55 @@ public class Task03 {
         int b[][] = join(x,y);
 
         print(b); //{{1,2,3},{4,5,6},{7,8,9},{1,1,1},{2,2,2},{3,3,3}}
+    } 
+    public static void print(int [][]x){
+      System.out.print("{");
+      for(int i=0;i<x.length;i++){
+        if(i>0)
+          System.out.print(",");
+        System.out.print("{");
+        for(int j=0;j<x[0].length;j++){
+          System.out.print(x[i][j]+",");
+        }
+        System.out.print("}");
+      }
+      System.out.println("}");
+    }
+    public static void swap(int [][]x, int [][]y){
+      int b[][]=new int[x.length][x[0].length];
+      for(int i=0;i<x.length;i++){
+        for(int j=0;j<x[0].length;j++){
+          b[i][j]=x[i][j];
+          x[i][j]=y[i][j];
+          y[i][j]=b[i][j];
+        }
+      }
+    }
+    public static int[][] reverseRow(int [][]x){
+      int b[][]=new int[x.length][x[0].length];
+      for(int i=0;i<x.length;i++){
+        for(int j=0;j<x[0].length;j++){
+          b[i][j]=x[x.length-1-i][j];
+        }
+      }
+      return b;
+    }
+    public static int[][] join(int [][]x,int [][]y){
+      int b[][]=new int[x.length+y.length][x[0].length];
+      for(int i=0;i<x.length;i++){
+        for(int j=0;j<x[0].length;j++){
+          b[i][j]=x[i][j];
+        }
+      }
+      for(int i=x.length;i<b.length;i++){
+        for(int j=0;j<b[0].length;j++){
+          b[i][j]=y[i-x.length][j];
+        }
+      }
+      return b;
     }
 
-    //You may need to code here
+   
 
 
 }
