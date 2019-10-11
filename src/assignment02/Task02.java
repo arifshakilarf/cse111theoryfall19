@@ -41,7 +41,11 @@ public class Task02 {
         int f = w2.add(x[x.length-1], z[1]);
         System.out.println(f); // 10
     }
-    //You may need to code here
+    public static void print(int []x){
+      for(int i=0;i<x.length;i++){
+        System.out.print(x[i]+" ");
+      }
+      System.out.println();
 
 
 }
