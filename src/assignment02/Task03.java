@@ -28,7 +28,43 @@ public class Task03 {
 
         print(b); //{{1,2,3},{4,5,6},{7,8,9},{1,1,1},{2,2,2},{3,3,3}}
     }
+    public static void swap(int x[][], int y[][]) {
+        int temp = 0;
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[0].length; j++) {
+                temp = x[i][j];
+                x[i][j] = y[i][j];
+                y[i][j] = temp;
+            }
+        }
+    }
 
+    public static int[][] reverseRow(int x[][]) {
+        int b[][] = new int[x.length][x[0].length];
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[0].length; j++) {
+                b[i][j] = x[x.length - 1 - i][j];
+            }
+        }
+        return b;
+    }
+
+    public static int[][] join(int x[][], int y[][]) {
+        int z[][] = new int[x.length + y.length][x[0].length];
+        for (int i = 0; i < x.length; i++) {
+            for (int j = 0; j < x[0].length; j++) {
+                z[i][j] = x[i][j];
+            }
+        }
+        for(int i=x.length;i<z.length;i++){
+            for(int j=0;j<z[0].length;j++){
+                z[i][j]=y[i-x.length][j];
+            }
+        }
+
+
+        return z;
+    }
     //You may need to code here
 
 
