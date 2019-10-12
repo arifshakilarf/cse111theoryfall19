@@ -1,4 +1,4 @@
-package week04;
+package week04.thursday;
 
 public class Manush {
     private String name;
