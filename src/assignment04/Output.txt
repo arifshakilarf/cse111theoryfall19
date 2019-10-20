@@ -1,0 +1,17 @@
+Name: A
+ID: 0
+Regular Student
+University: null
+List of Courses: CSE110 CSE111 CSE220 CSE221
+
+4
+1
+14
+University{name='BRAC University', hasCampus=false}
+University{name='BRAC University', hasCampus=true}
+Yes, A is of NSU
+This guy needs time
+East or west amra best.
+true
+false
+Congrats, less money to spend.
