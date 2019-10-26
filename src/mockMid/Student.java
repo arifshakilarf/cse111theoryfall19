@@ -1,4 +1,5 @@
 package mockMid;
+
 //CODE DOES NOT WORK. DO NOT FOLLOW THIS YET.
 public class Student {
     public int applicantID;
@@ -12,7 +13,7 @@ public class Student {
     }
 
     public boolean check(Student c) {
-        if(c.applicantID == this.applicantID) {
+        if(c.applicantID == this.applicantID && this.name.equals(c.name)) {
             return true;
         }
         return false;
@@ -21,7 +22,7 @@ public class Student {
         System.out.printf("Applicant ID: %d, Student ID: %d, Name: %s\n", applicantID, studentID, name);
     }
     public void match(Student c) {
-        if(c.applicantID == this.applicantID && this.name.equals(c.name)) {
+        if(check(c)) {
             System.out.println("same person");
         }
         else {
