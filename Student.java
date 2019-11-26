@@ -1,69 +1,75 @@
-package assignment04;
+package Experiment02;
 
-import java.util.ArrayList;
-public class Student {
+public class Student{
     public String name=" ";
-    public static int id=-1;
-    public String typeOfStudent="Regular Student";
-    private int ID=0;
-    public static int preUni=0;
-    public String university="null";
+    public int ID=0;
+    public int semester=0;
+    public String department=" ";
+    public double creditInThisCourse=0.0;
+    public double cgpainThisCourse=0.0;
+    public static double totalCredit=0.0;
+    public static double CGPA=0.0;
+    public static double previuosSemesterCGPA=0.0;
+    public double semesterCGPA=0.0;
+    public double comulativeCGPA=0.0;
+    public static double completedCredit=0.0;
+    public static double tempCredit=0.0;
+    public static double tempCGPA=0.0;
 
-    public Student(String name){
+    public Student(String name, int ID, int semester, String dept) {
         this.name=name;
-            this.id++;
-            ID=id;
+        this.ID=ID;
+        this.semester=semester;
+        this.department=dept;
     }
 
-    public Student(String name,String typeOfStudent){
-        this.name=name;
-        preUni=1;
-        this.typeOfStudent=typeOfStudent;
-        this.id++;
-        ID=id;
+    public Student(double creditInThisCourse, double cgpainThisCourse) {
+        this.creditInThisCourse=creditInThisCourse;
+        this.cgpainThisCourse=cgpainThisCourse;
+        this.totalCredit+=creditInThisCourse;
+        this.completedCredit+=creditInThisCourse;
+        CGPA += result();
     }
 
-    ArrayList <Course> course=new ArrayList <Course> ();
-
-    public void addCourse(Course c1, Course c2, Course c3, Course c4){
-        course.add(c1);
-        course.add(c2);
-        course.add(c3);
-        course.add(c4);
+    private double result() {
+        double x=this.creditInThisCourse*this.cgpainThisCourse;
+        return x;
     }
 
-    public void addCourse(Course c1, Course c2, Course c3){
-        course.add(c1);
-        course.add(c2);
-        course.add(c3);
-    }
-
-    public String toString(){
-        return "Name: "+this.name+"\n"+"ID: "+this.ID+"\n"+this.typeOfStudent+"\n"+"University: "+this.university+"\n"+"List of Courses: "+course.get(0)+" "+course.get(1)+" "+course.get(2)+" "+course.get(3)+"\n";
-    }
-
-    public int getID(){
-        return this.ID;
-    }
-
-    public boolean isNSU() {
-            return true;
-    }
-
-    public String getName(){
-        return this.name;
-    }
-
-    public boolean isPreUni(){
-        if(preUni==1){
-            return true;
+    public void print(int k, String[] courseArray){
+        String [] courseArray1=courseArray;
+        int x=k;
+        if(x<this.semester){
+            this.tempCredit = this.totalCredit-this.tempCredit;
+            this.tempCGPA = this.CGPA-this.tempCGPA;
         }
-        else{
-            return false;
+        this.semesterCGPA=this.tempCGPA/this.tempCredit;
+        this.previuosSemesterCGPA+=this.semesterCGPA;
+        System.out.println("=================================================");
+        System.out.println("Name              : "+this.name);
+        System.out.println("Student ID        : "+this.ID);
+        System.out.println("Department        : "+this.department);
+        System.out.println("Semester          : "+this.semester);
+        System.out.print("Courses           : ");
+        for(int p = 0; p < courseArray1.length-1; p++){
+            System.out.print(courseArray1[p]+", ");
         }
-    }
-
-    public void completePreUni() {
-        this.preUni=0;
+        System.out.println(courseArray1[courseArray1.length-1]);
+        System.out.println("Credits Completed : "+this.completedCredit);
+        System.out.println("=================================================");
+        for(int m=x;  ; ) {
+            System.out.println("=================================================");
+            System.out.println("-------Result--------");
+            System.out.print("CGPA ==>>  Semester   : ");
+            System.out.printf("%.2f",this.semesterCGPA);
+            System.out.println();
+            this.comulativeCGPA=this.previuosSemesterCGPA/m;
+            System.out.print("CGPA ==>>  Comulative : ");
+            System.out.printf("%.2f",this.comulativeCGPA);
+            System.out.println();
+            System.out.println("=================================================");
+            System.out.println();
+            break;
+        }
     }
 }
