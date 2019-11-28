@@ -1,5 +1,2 @@
-Hello world
-Bye world
-What the hell world
-Why you so complex world
-Why so cruel world
+Arif,14101031,Spring14
+Zidan,18101186,Spring18
