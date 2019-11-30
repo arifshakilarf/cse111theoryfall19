@@ -1,2 +1,1 @@
-Arif,14101031,Spring14
-Zidan,18101186,Spring18
+Arif,14101031,2.98
